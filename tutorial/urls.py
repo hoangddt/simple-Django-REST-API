@@ -1,18 +1,19 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from django.conf.urls import include
+from snippets import views
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'tutorial.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
+# Create a router and register our viewsets with it.
+router = DefaultRouter()
+router.register(r'snippets', views.SnippetViewSet)
+router.register(r'users', views.UserViewSet)
+
+# The API URLs are now determined automatically by the router.
+# Additionally, we include the login URLs for the browsable API.
+urlpatterns = [
+    url(r'^', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('snippets.urls')),
-)
-
-# add a pattern to include the login and logout views for the browsable API.
-urlpatterns += [
-    url(r'^api-auth/', include('rest_framework.urls',
-                               namespace='rest_framework')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
+

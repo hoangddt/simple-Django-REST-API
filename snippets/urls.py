@@ -28,7 +28,7 @@ user_detail = UserViewSet.as_view({
 
 # API endpoints
 urlpatterns = format_suffix_patterns([
-    url(r'^$', views.api_root),
+    url(r'^$', api_root),
     url(r'^snippets/$',
         snippet_list,
         name='snippet-list'),
