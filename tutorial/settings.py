@@ -65,6 +65,11 @@ DATABASES = {
     }
 }
 
+# Adding pagination
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
