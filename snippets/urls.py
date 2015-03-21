@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from snippets import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 # API endpoints
 urlpatterns = format_suffix_patterns([
