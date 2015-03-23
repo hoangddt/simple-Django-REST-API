@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'snippets',
     'rest_framework_swagger',
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,7 +72,10 @@ DATABASES = {
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
-
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.request",
+)
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
