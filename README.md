@@ -1,7 +1,6 @@
 # Simple Django REST framework
 -----------
-This is a simple web-app that implement django-rest-framework
-This is created by hoangddt and follow this instruction [REST framework tutorial](http://www.django-rest-framework.org/tutorial/1-serialization/)
+This is a simple web-app that implement django-rest-framework  This is created by hoangddt and follow this instruction [REST framework tutorial](http://www.django-rest-framework.org/tutorial/1-serialization/)
 -----------
 
 ## Run
@@ -17,6 +16,7 @@ Then install dependencies
 pip install django
 pip install djangorestframework
 pip install pygments  # We'll be using this for the code highlighting
+pip install django-rest-swagger
 ```
 ### Run the app
 ```sh
@@ -33,3 +33,6 @@ And then Run server
 python manage.py runserver
 ```
 And then go ahead at http://localhost:8000/
+
+### Browser API
+You can go to /docs to see the API and test
