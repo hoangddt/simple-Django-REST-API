@@ -1,5 +1,6 @@
 # Simple Django REST framework
 -----------
+
 This is a simple web-app that implement django-rest-framework  This is created by hoangddt and follow this instruction [REST framework tutorial](http://www.django-rest-framework.org/tutorial/1-serialization/)
 -----------
 
